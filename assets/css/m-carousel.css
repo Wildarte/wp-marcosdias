@@ -1,0 +1,498 @@
+/* slide hero */
+.slide_hero_content{
+    width: 100%;
+    height: auto!important;
+    display: block;
+    overflow: hidden;
+}
+.slide_hero_content a{
+    display: flex;
+}
+.slide_hero_content img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide_hero_content .owl-dots{
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+    text-align: center;
+}
+.slide_hero_content .owl-dots button{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #999999;
+    margin: 0 4px;
+    position: relative;
+}
+.slide_hero_content .owl-dots button.active::before{
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #777;
+}
+/* slide hero */
+
+
+/* slide clients */
+.client_slide.owl-carousel .owl-stage-outer{
+ padding-top: 80px;
+}
+.client_slide{
+    padding: 20px 10px;
+}
+.client_card{
+    text-align: center;
+    flex-basis: calc(33.33% - 20px);
+    margin: 10px;
+    background-color: var(--color-white);
+    position: relative;
+    padding: 100px 15px 30px;
+    border-radius: 5px;
+    z-index: 10;
+}
+.client_card .client_card_img{
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+}
+.client_card_img img{
+    width: 140px!important;
+    margin: auto;
+}
+.client_card_info h3{
+    color: var(--color-blue-2);
+    margin-bottom: 20px;
+}
+.client_card_info p{
+    color: var(--color-blue-2);
+    font-size: .95em;
+    margin-bottom: 20px;
+}
+.client_card small{
+    color: var(--color-blue-2);
+    font-weight: 200;
+}
+.client_slide .owl-dots{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 0;
+}
+.client_slide .owl-dots button{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #999999;
+    margin: 0 3px;
+    position: relative;
+}
+.client_slide .owl-dots button.active::after{
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #777;
+}
+
+/* slide office */
+.office_slide .owl-dots{
+    max-width: calc(var(--container) + 200px);
+    margin: auto;
+    display: flex!important;
+    justify-content: flex-end;
+    position: absolute;
+    top: -62px;
+    width: 100%;
+    counter-reset: item;
+}
+.office_slide .owl-dots button{
+    background-color: transparent;
+}
+.office_slide .owl-dots button::before{
+    counter-increment: item;
+    content: counter(item);
+    padding: 0 15px;
+    font-size: 1.6em;
+    color: var(--color-gray-3);
+}
+.office_slide .owl-dots button.active::before{
+    font-size: 2.2em;
+    font-weight: 600;
+    color: var(--color-blue-dark);
+}
+/* slide office */
+
+/* card follow */
+.follow_left h2{
+    margin-bottom: 10px;
+}
+.follow_right{
+    flex-basis: 75%;
+    width: 70%;
+    display: flex;
+    margin-bottom: 20px;
+}
+.follow_right .subtitle-default{
+    margin: 5px 0;
+}
+.card_follow{
+    flex-basis: calc(33.33% - 20px);
+    margin: 10px;
+    transition: all .3s;
+}
+.card_follow img{
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+}
+.card_follow:hover{
+    box-shadow: 2px 2px 30px rgba(20, 20, 20, .45);
+    transform: scale(1.01);
+}
+.follow_right p{
+    font-size: .9em;
+    margin-bottom: 5px;
+}
+.card_follow_info{
+    padding: 10px;
+}
+.follow_right .owl-stage-outer{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.follow_carousel .owl-nav{
+    position: absolute;
+    left: calc(-33% + 10px);
+    bottom: 80px;
+}
+.follow_carousel .owl-nav button{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid #888888!important;
+    margin-right: 10px;
+}
+.follow_carousel .owl-nav button span{
+    font-size: 1.5em;
+    color: #888888;
+}
+/* card follow */
+
+
+/* slide main office */
+.main_slide_office{
+    position: relative;
+}
+.main_slide_office_content{
+    width: 100%;
+    position: relative;
+    padding: 40px 0px;
+}
+.img_o{
+    position: absolute;
+    left: 35%;
+    bottom: 40px;
+}
+.main_slide_office_left{
+    position: relative;
+    padding: 60px 0;
+    min-height: 800px;
+    width: 50%;
+}
+.img_gray, .dot_one, .dot_two{
+    position: absolute;
+}
+.img_gray{
+    right: 40px;
+    top: 100px;
+    max-height: 100%;
+}
+.slide_carousel_main_office{
+    position: relative;
+    z-index: 10;
+    height: 80%;
+    width: calc(100% - 80px);
+    overflow: hidden;
+}
+.slide_carousel_main_office img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.dot_one{
+    right: 0;
+    top: 25%;
+}
+.dot_two{
+    left: 40%;
+    bottom: 100px;
+}   
+.slide_carousel_main_office .owl-dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+.slide_carousel_main_office .owl-dots button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #999999;
+    margin: 0 8px;
+    position: relative;
+}
+.slide_carousel_main_office .owl-dots button.active::before{
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #bbb;
+}
+.slide_carousel_main_office .owl-dots button.active{
+    background-color: #343434;
+}
+
+/* slide main office */
+
+
+
+
+/* slide offices */
+.office_carousel{
+    width: 100%;
+    height: 100%;
+}
+.office_carousel img{
+    height: 100%;
+    object-fit: cover;
+}
+.office_carousel.owl-carousel .owl-stage-outer{
+    height: 100%;
+}
+.office_carousel.owl-carousel .owl-stage{
+    height: 100%;
+}
+.office_carousel.owl-carousel .owl-stage .owl-item{
+    height: 100%!important;
+}
+.office_carousel .owl-dots{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+}
+.office_carousel .owl-dots button{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #c4c4c4;
+    margin: 0 4px;
+    position: relative;
+}
+.office_carousel .owl-dots button.active{
+    width: 18px;
+    height: 18px;
+    border: 4px solid #c4c4c4;
+    background-color: #343434;
+}
+.office_carousel .owl-nav{
+    position: absolute;
+    top: 40%;
+    width: 100%;
+}
+.office_carousel.owl-carousel .owl-nav button{
+    font-size: 5em;
+    color: #999999;
+}
+.office_carousel.owl-carousel .owl-nav button.owl-next{
+    position: absolute;
+    left: 100%;
+    right: -50px;
+}
+.office_carousel.owl-carousel .owl-nav button.owl-prev{
+    position: absolute;
+    left: -50px;
+}
+
+
+
+/* slides */
+.slide_imgs{
+    width: 100%;
+    max-height: 800px;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+.slide_imgs img{
+    width: 100%;
+    height: 100%;
+}
+
+.slide_imgs .content_slide_img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.slide_imgs .content_slide_img img{
+    width: 100%!important;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    opacity: 0;
+    transition: opacity .3s;
+}
+.show_img_slide{
+    display: flex!important;
+    opacity: 1!important;
+    transition: opacity .3s;
+}
+.slide_img_nav{
+    position: absolute;
+    top: calc(50% - 50px);
+    width: 100%;
+}
+.btn_next_slide_img{
+    position: absolute;
+    left: calc(100% + 20px);
+}
+.btn_prev_slide_img{
+    position: absolute;
+    right: calc(100% + 20px);
+}
+.slide_img_nav button{
+    font-size: 5em;
+    color: #999999;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.card_office_uni:nth-child(even) .btn_next_slide_img{
+    display: none;
+}
+/* slides */
+/* slide offices */
+
+
+
+
+@media(max-width: 1400px){
+    .img_gray{
+        height: 60%;
+    }
+    .slide_carousel_main_office .owl-dots{
+        bottom: 100px;
+    }
+}
+
+@media(max-width: 1024px){
+    .follow_carousel .owl-nav{
+        margin-top: 20px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .main_slide_office_left{
+        min-height: unset;
+        height: auto;
+    }
+    .office_slide .owl-dots{
+        justify-content: flex-start;
+    }
+    .main_slide_office_left{
+        width: 100%;
+    }
+    .img_o{
+        display: none;
+    }
+    .img_gray{
+        top: 140px;
+    }
+}
+
+@media(max-width: 768px){
+    .office_slide .owl-dots button::before{
+        font-size: 1em;
+    }
+    .office_slide .owl-dots button.active::before{
+        font-size: 1.5em;
+    }
+    .slide_carousel_main_office .owl-dots{
+        bottom: 40px;
+    }
+    .card_office_uni:nth-child(even) .btn_next_slide_img{
+        display: flex;
+    }
+}
+
+@media(max-width: 600px){
+    .office_slide .owl-dots{
+        justify-content: center;
+    }
+    .office_slide .owl-dots button::before{
+        font-size: .9em;
+        padding: 0 5px;
+    }
+    .office_slide .owl-dots button.active::before{
+        font-size: 1em;
+    }
+    .img_gray{
+        top: 100px;
+        right: 20px;
+        width: 90%;
+    }
+    .slide_carousel_main_office{
+        width: calc(100% - 40px);
+    }
+    .dot_one{
+        display: none;
+    }
+}
+
+@media(max-width: 420px){
+    .dot_two{
+        left: unset;
+        right: 0;
+    }
+    .img_gray{
+        right: 10px;
+        top: 70px;
+    }
+    .slide_carousel_main_office{
+        width: calc(100% - 20px);
+    }
+    .slide_carousel_main_office .owl-dots{
+        bottom: 10px;
+    }
+    .slide_carousel_main_office .owl-dots button{
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+    }
+    .slide_carousel_main_office .owl-dots button.active::before{
+        top: -2px;
+        left: -2px;
+        width: 12px;
+        height: 12px;
+    }
+}
