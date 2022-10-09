@@ -374,32 +374,51 @@ get_header();
                 <div class="faq_ask">
     
                     <ul class="list_ask">
-                        <li>
-                            <h4><i class="bi bi-dash"></i> Tenho que pagar o advogado para entrar com um processo trabalhista?</h4>
-                            <p>Não. Você não precisa pagar nada para entrar com um processo. A MRD trabalha em contrato de êxito. Ou seja, os honorários são pagos única e exclusivamente após o recebimento da Ação Trabalhista.
-                            </p>
-                        </li>
     
                         <li>
                             <h4><i class="bi bi-dash"></i>Preciso me deslocar até o escritório? Não encontrei a MRD na minha cidade.</h4>
-                            <p>Não. Você não precisa pagar nada para entrar com um processo. A MRD trabalha em contrato de êxito. Ou seja, os honorários são pagos única e exclusivamente após o recebimento da Ação Trabalhista.
+                            <p>Não! Você não precisa se deslocar até o escritório. Um de nossos diferenciais encontra-se justamente na equipe de suporte, que possibilita o acompanhamento passo a passo do seu processo com diversos canais de interação entre cliente e advogado. Ou seja, você pode conversar diretamente com a nossa equipe em um de nossos canais de comunicação (Site, whatsapp, Redes sociais) e, caso queira uma conversa presencialmente, um de nossos especialistas vai até você.
                             </p>
                         </li>
     
                         <li>
                             <h4><i class="bi bi-dash"></i>Quanto tempo demora uma Ação Trabalhista?</h4>
-                            <p>Não. Você não precisa pagar nada para entrar com um processo. A MRD trabalha em contrato de êxito. Ou seja, os honorários são pagos única e exclusivamente após o recebimento da Ação Trabalhista.
+                            <p>Essas situações sempre geram uma ansiedade e é normal que você esteja se perguntando quanto tempo tudo isso vai levar. Em média, um processo demora cerca de três anos para ser concluído. Mas é importante frisar que este tempo é somente uma estimativa. Cada caso é único e demanda um tempo para sua solução.
                             </p>
                         </li>
                         <li>
                             <h4><i class="bi bi-dash"></i>Quanto tempo tenho para buscar os meus direitos trabalhistas na Justiça?</h4>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia nostrum consequatur exercitationem! Voluptatibus praesentium illum blanditiis deserunt velit modi sunt sapiente voluptate eum? Molestias temporibus magnam ducimus repellat architecto saepe eius ex, ipsa sed ullam sit tenetur explicabo magni modi.</p>
+                            <p>Você tem dois anos, contados da data do desligamento da empresa para buscar seus direitos na justiça. Caso esse prazo seja ultrapassado, mesmo que tenha direitos a receber, tais direitos já estão prescritos e não podem mais ser objeto de discussão.</p>
                         </li>
                         <li>
                             <h4><i class="bi bi-dash"></i>Posso processar a empresa enquanto ainda estou trabalhando?</h4>
+                            <p>Sim! Você não precisa sair da empresa para entrar na Justiça contra ela, podendo iniciar uma ação trabalhista ainda como funcionário.</p>
                         </li>
                         <li>
                             <h4><i class="bi bi-dash"></i>Quais provas e documentos são necessários para abrir uma Reclamação Trabalhista?</h4>
+                            <p>Para iniciar uma Reclamatória Trabalhista será necessário cópia da identidade; cópia do CPF;
+                            comprovante de endereço; cópia da CTPS; termo de rescisão do contrato de trabalho (quando houver); recibos de pagamentos (quando houver); Documentos que sirvam como prova para a causa trabalhista, tais como e-mails, comunicados, gravações de áudio e vídeo, fotos e afins e a procuração assinada para que o advogado possa te representar judicialmente. </p>
+                        </li>
+                        <li>
+                            <h4><i class="bi bi-dash"></i>Quanto custa a contratação de um advogado para ação trabalhista?</h4>
+                            <p>Normalmente, o honorário de um advogado trabalhista é cobrado a partir de uma porcentagem sobre o valor da causa vencida. Essa modalidade de pagamento é conhecida como “contrato de êxito”. Aqui no escritório não é diferente. Ou seja, na prática você não irá ter nenhum custo com o seu processo enquanto ele estiver tramitando. Você paga para gente única e exclusivamente após o recebimento da ação.</p>
+                        </li>
+                        <li>
+                            <h4><i class="bi bi-dash"></i>Perdi o processo. Quanto tenho que pagar para o escritório?</h4>
+                            <p>Nada! Justamente porque confiamos em nossa metodologia e competência de nossa equipe, nosso escritório trabalha em contrato de êxito. Sendo assim, você só paga se ganhar o processo, mesmo assim, somente quando receber os valores da ação. Se você não ganhar nada, não terá que pagar nenhum valor para nós.</p>
+                        </li>
+                        <li>
+                            <h4><i class="bi bi-dash"></i>Processei a empresa e não ganhei. Posso tentar novamente?</h4>
+                            <p>Se um juiz já analisou o caso e entendeu que não há direito ali, não será possível entrar com outro processo com os mesmos pedidos. Ou seja, o juiz já terá analisado o mérito.
+                            O que é possível é entrar com uma nova Ação Trabalhista, com outros pedidos, necessariamente diferentes daqueles do primeiro processo.</p>
+                        </li>
+                        <li>
+                            <h4><i class="bi bi-dash"></i>Um colega também processou a empresa, mas o valor que ele ganhou foi maior do que o meu. Por que?</h4>
+                            <p>Primeiramente é importante destacar que, ainda que você e seu colega tenham os mesmos cargos e recebam o mesmo salário, pode acontecer de vocês trabalharem em horários diferentes, dos ganhos de comissão serem diferentes, do tempo de empresa ser diferentes. Somente por estas questões, o valor recebido no processo já será diferente. Além disso, há outros fatores que podem fazer uma pessoa ganhar mais ou menos em um processo, como as verbas trabalhistas que não foram pagas no momento da rescisão e as possíveis indenizações. Então, os valores vão depender do caso específico de cada trabalhador.</p>
+                        </li>
+                        <li>
+                            <h4><i class="bi bi-dash"></i>Entrei com uma Ação Trabalhista. Terei problemas para ser contratado futuramente?</h4>
+                            <p>É normal ter medo de não ser contratado por outras empresas por ter entrado com um processo trabalhista contra o antigo empregador. Mas entenda uma coisa: exigir os seus direitos na justiça não marca a sua vida profissional. Se ficar comprovado que você deixou de ser contratado por causa de um processo trabalhista em andamento ou já encerrado, essa atitude é passível de indenização.</p>
                         </li>
                     </ul>
     

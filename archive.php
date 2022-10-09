@@ -7,7 +7,7 @@ get_header();
 
     <section>
         <header class="header-default">
-            <h2 class="title-default">Conheça seus Direitos</h2>
+            <h2 class="title-default"><?php the_archive_title() ?></h2>
         </header>
     </section>
 

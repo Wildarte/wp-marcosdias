@@ -28,8 +28,14 @@
             <div class="container d-flex content_inset_header">
 
                 <div class="logo_link d-flex">
-                    <a href="">
-                        <img src="assets/img/logo.png" alt="">
+                    <a href="<?= home_url() ?>">
+                        <?php
+                            $custom_logo_id = get_theme_mod( 'custom_logo' );
+                            $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+
+                            add_query_arg( array( 'something' => 'blabla==' ), 'https://www.google.com' );
+                        ?>
+                        <img src="<?=  esc_url( $logo[0] )  ?>" alt="logo do site" title="logo do site">
                     </a>
                     <ul class="d-flex links_social_header">
                         <li>
@@ -47,7 +53,7 @@
                 <nav class="menu">
                     <div class="top_menu_mobile">
                         <a href="">
-                            <img src="assets/img/logo.png" alt="">
+                            <img src="<?= get_template_directory_uri() ?>/assets/img/logo.png" alt="">
                         </a>
                         <div class="btn_close_menu">
                             <i class="bi bi-x-circle"></i>
@@ -76,7 +82,7 @@
     
                     <div class="login_header">
                         <a href="">
-                            <img src="assets/img/login.png" alt="">
+                            <img src="<?= get_template_directory_uri() ?>/assets/img/login.png" alt="">
                             <span>Cliente</span>
                         </a>
     

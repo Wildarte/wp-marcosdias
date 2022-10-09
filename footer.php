@@ -3,7 +3,7 @@
 <div class="container content_footer d-flex">
     <div class="f-25 col_footer">
         <a href="" class="link_footer">
-            <img src="assets/img/logo_mrd.png" alt="">
+            <img src="<?= get_template_directory_uri() ?>/assets/img/logo_mrd.png" alt="">
         </a>
     </div>
 
