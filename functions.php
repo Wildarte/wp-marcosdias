@@ -152,6 +152,7 @@
     /** END Pagination */
 
   //Exclude pages from WordPress Search
+  /*
     if (!is_admin()) {
         function wpb_search_filter($query) {
             if ($query->is_search) {
@@ -161,6 +162,23 @@
         }
         add_filter('pre_get_posts','wpb_search_filter');
     }
+    */  
+
+
+    function get_id_by_template_name($template_name){
+
+        $page = "";
+
+        $pages = get_pages(array(
+            'meta_key' => '_wp_page_template',
+            'meta_value' => $template_name
+        ));
+        foreach($pages as $page){
+            return   $page->ID;
+        }
+    }
+
+    include('admin/postfield.php')
 
 
 

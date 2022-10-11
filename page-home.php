@@ -6,22 +6,23 @@ get_header();
     <main>
 
         <section class="slide_hero">
+            <?php
+                $banners = get_post_meta(get_the_ID(), 'slider_banner', true);
+                if($banners):
+            ?>
             <div class="owl-carousel slide_hero_content" id="slide_hero">
-                <a href="">
-                    <img src="<?= get_template_directory_uri() ?>/assets/img/BANNER_1B 1.jpg" alt="">
-                </a>
-                <a href="">
-                    <img src="<?= get_template_directory_uri() ?>/assets/img/BANNER_1B 1.jpg" alt="">
-                </a>
-                <a href="">
-                    <img src="<?= get_template_directory_uri() ?>/assets/img/BANNER_1B 1.jpg" alt="">
-                </a>
-                <a href="">
-                    <img src="<?= get_template_directory_uri() ?>/assets/img/BANNER_1B 1.jpg" alt="">
-                </a>
-                <a href="">
-                    <img src="<?= get_template_directory_uri() ?>/assets/img/BANNER_1B 1.jpg" alt="">
-                </a>
+                <?php
+                   
+
+                    foreach($banners as $banner):
+                ?>
+                <<?= $banner['banner_link'] != '' ? 'a' : 'div';  ?> href="<?= $banner['banner_link'] ?>">
+                    <img src="<?= $banner['banner_img'] ?>" alt="">
+                </<?= $banner['banner_link'] != '' ? 'a' : 'div';  ?>>
+
+                    <?php endforeach; endif; ?>
+
+                
             </div>
         </section>
 
@@ -38,7 +39,7 @@ get_header();
 
                     <p class="desc-default d-block w-100"><strong>Marcos Roberto Dias</strong> - Advogado</p>
 
-                    <a class="btn-blue" href="">fale com a minha equipe</a>
+                    <a class="btn-blue" href="<?= $link_whatsapp ?>">Fale com a minha equipe</a>
                 </div>
 
                 <div class="f-50 img_about_dr">
@@ -83,7 +84,7 @@ get_header();
                         
                     </div>
 
-                    <a class="btn-blue m-20-0" href="">Converse com um especialista</a>
+                    <a class="btn-blue m-20-0" href="<?= $link_whatsapp ?>">Converse com um especialista</a>
                 </div>
 
             </div>
@@ -150,7 +151,7 @@ get_header();
 
             <p class="desc-default">Busque agora os seus direitos! Entre em contato com a Marcos Roberto Dias Sociedade de Advogados</p>
 
-            <a class="btn-blue bg-blue-2" href="">CONVERSE AGORA COM UM ESPECIALISTA</a>
+            <a class="btn-blue bg-blue-2" href="<?= $link_whatsapp ?>">CONVERSE AGORA COM UM ESPECIALISTA</a>
         </section>
 
         <section class="section_numbers">
@@ -271,51 +272,7 @@ get_header();
                     </h2>
                 </header>
                 
-                <div class="owl-carousel client_slide d-flex" id="client_slide">
-                    <article class="client_card">
-                        <div class="client_card_img">
-                            <img src="<?= get_template_directory_uri() ?>/assets/img/user.png" alt="">
-                        </div>
-                        <div class="client_card_info">
-                            <h3>JHON LENNON FERREIRA PALUDI</h3>
-                            <p>O melhor atendimento que recebi até hoje!! A Dr Elisângela foi de um profissionalismo e uma paciência admirável...</p>
-                            <small>Ler mais...</small>
-                        </div>
-                    </article>
-
-                    <article class="client_card">
-                        <div class="client_card_img">
-                            <img src="<?= get_template_directory_uri() ?>/assets/img/user2.png" alt="">
-                        </div>
-                        <div class="client_card_info">
-                            <h3>FLAVIA SANTIAGO</h3>
-                            <p>Desde já agradeço o do Dr. Luiz Otávio pelo profissionalismo, atenção e cuidado com todos os detalhes. E a prontidão...</p>
-                            <small>Ler mais...</small>
-                        </div>
-                    </article>
-
-                    <article class="client_card">
-                        <div class="client_card_img">
-                            <img src="<?= get_template_directory_uri() ?>/assets/img/user3.png" alt="">
-                        </div>
-                        <div class="client_card_info">
-                            <h3>JACIANE MAIRA</h3>
-                            <p>Olá, gostaria de agradecer desde início fui muito bem representada, agradeço aos profissionais extremamente...</p>
-                            <small>Ler mais...</small>
-                        </div>
-                    </article>
-
-                    <article class="client_card">
-                        <div class="client_card_img">
-                            <img src="<?= get_template_directory_uri() ?>/assets/img/user2.png" alt="">
-                        </div>
-                        <div class="client_card_info">
-                            <h3>FLAVIA SANTIAGO</h3>
-                            <p>Desde já agradeço o do Dr. Luiz Otávio pelo profissionalismo, atenção e cuidado com todos os detalhes. E a prontidão...</p>
-                            <small>Ler mais...</small>
-                        </div>
-                    </article>
-                </div>
+                <?php get_template_part('template-parts/content','deps'); ?>
 
             </div>
         </section>
@@ -328,7 +285,7 @@ get_header();
                 </div>
 
                 <div class="card_simple_right">
-                    <a class="btn-blue" href="">Converse com um especialista</a>
+                    <a class="btn-blue" href="<?= $link_whatsapp ?>">Converse com um especialista</a>
                 </div>
             </div>
         </section>
@@ -356,7 +313,7 @@ get_header();
                         </li>
                     </ul>
 
-                    <a class="btn-blue cta_adv" href="">Converse com um advogado</a>
+                    <a class="btn-blue cta_adv" href="<?= $link_whatsapp ?>">Converse com um advogado</a>
                 </div>
 
                 <div class="f-50 section_adv_img">
@@ -522,15 +479,11 @@ get_header();
                 </div>
 
                 <div class="see_more">
-                    <a class="subtitle-default text-uppercase" href="">+ Veja Todos os Posts</a>
+                    <a class="subtitle-default text-uppercase" href="<?= home_url() ?>">+ Veja Todos os Posts</a>
                 </div>
             </div>
 
         </section>
-
-        
-
-        
 
     </main>
 

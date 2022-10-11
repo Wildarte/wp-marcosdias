@@ -12,10 +12,16 @@
     <!-- wp head -->
 </head>
 <body>
-    
+
+    <?php
+        $number_whatsapp = get_post_meta(get_the_ID(), 'number_whatsapp', true);
+        $msg_whatsapp = get_post_meta(get_the_ID(), 'msg_whatsapp', true);
+        $link_whatsapp = 'https://api.whatsapp.com/send?phone='.$number_whatsapp.'&text='.$msg_whatsapp;
+    ?>
+
     <header class="header">
         <div class="cta_top">
-            <a href="">
+            <a href="<?= $link_whatsapp ?>">
                 Converse com um especialista agora
             </a>
 
@@ -39,13 +45,13 @@
                     </a>
                     <ul class="d-flex links_social_header">
                         <li>
-                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href="https://www.facebook.com/marcosrdiasadv/"><i class="bi bi-facebook"></i></a>
                         </li>
                         <li>
-                            <a href=""><i class="bi bi-instagram"></i></a>
+                            <a href="https://www.instagram.com/marcosrdiasadv/"><i class="bi bi-instagram"></i></a>
                         </li>
                         <li>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/company/marcos-roberto-dias"><i class="bi bi-linkedin"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -59,6 +65,15 @@
                             <i class="bi bi-x-circle"></i>
                         </div>
                     </div>
+                    <?php
+                        wp_nav_menu([
+                            'menu' => 'Menu Principal',
+                            'menu_class' => 'lista_menu',
+                            'theme_location' => 'menu-principal',
+                            'container' => false
+                        ])
+                    ?>
+                    <!-- 
                     <ul class="lista_menu">
                         <li>
                             <a href="">Sobre a MRD</a>
@@ -73,9 +88,10 @@
                             <a href="">Contato</a>
                         </li>
                     </ul>
+                     -->
     
                     <div class="cta_menu">
-                        <a class="btn-blue" href="">
+                        <a class="btn-blue" href="<?= $link_whatsapp ?>">
                             Fale com um advogado
                         </a>
                     </div>
@@ -90,13 +106,13 @@
 
                     <ul class="header_social_mobile" style="width: unset;">
                         <li>
-                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href="https://www.facebook.com/marcosrdiasadv/"><i class="bi bi-facebook"></i></a>
                         </li>
                         <li>
-                            <a href=""><i class="bi bi-instagram"></i></a>
+                            <a href="https://www.instagram.com/marcosrdiasadv/"><i class="bi bi-instagram"></i></a>
                         </li>
                         <li>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/company/marcos-roberto-dias"><i class="bi bi-linkedin"></i></a>
                         </li>
                     </ul>
 
