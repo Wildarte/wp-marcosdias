@@ -89,6 +89,11 @@ figure.img_post{
 .content_post img{
     max-width: 100%;
 }
+.content_post a{
+    color: var(--color-blue);
+    font-weight: 600;
+    text-decoration: underline;
+}
 /* post content style */
 
 .pos_post{

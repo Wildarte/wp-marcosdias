@@ -60,10 +60,20 @@
                 <div class="pos_post">
 
                     <div class="tags_post">
-                        <h3>Tags:</h3>
+                        
                         <?php
-                            wp_tag_cloud()
+                            $tags = get_the_tags();
+                            if($tags):
                         ?>
+                        <h3>Tags:</h3>
+                        <ul>
+                            <?php
+                                foreach($tags as $tag){
+                                    echo '<li><a href="'.get_tag_link($tag->term_taxonomy_id).'">'.$tag->name.'</a></li>';
+                                }
+                            ?>
+                        </ul>
+                        <?php endif; ?>
 
                     </div>
 
