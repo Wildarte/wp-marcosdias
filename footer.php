@@ -16,17 +16,15 @@
     <div class="f-25 col_footer">
         <h3>Menu</h3>
 
-        <ul>
-            <li>
-                <a href="">O Escritório</a>
-            </li>
-            <li>
-                <a href="">Seus Direitos</a>
-            </li>
-            <li>
-                <a href="">Contato</a>
-            </li>
-        </ul>
+        <?php
+            wp_nav_menu([
+                'menu' => 'Menu Rodapé',
+                'menu_class' => 'lista_menu',
+                'theme_location' => 'menu-rodape',
+                'container' => false
+            ])
+        ?>
+
     </div>
 
     <div class="f-25 col_footer">
@@ -49,13 +47,13 @@
 
         <ul class="d-flex links_social">
             <li>
-                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href="https://www.facebook.com/marcosrdiasadv/"><i class="bi bi-facebook"></i></a>
             </li>
             <li>
-                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href="https://www.instagram.com/marcosrdiasadv/"><i class="bi bi-instagram"></i></a>
             </li>
             <li>
-                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.linkedin.com/company/marcos-roberto-dias"><i class="bi bi-linkedin"></i></a>
             </li>
         </ul>
     </div>
@@ -71,7 +69,9 @@
 <script src="assets/js/script.js"></script>
 <script src="assets/js/script-office2.js"></script>
 <script src="assets/js/map-script.js"></script>
- -->
+-->
+
+<script>let url_site = '<?= get_template_directory_uri() ?>'; </script>
 
 <?php wp_footer() ?>
 </body>

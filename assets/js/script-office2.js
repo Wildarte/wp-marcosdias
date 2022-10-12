@@ -199,22 +199,24 @@ $(document).ready(function(){
 
 
 const select_offices = document.getElementById('select_offices');
+if(select_offices){
+    select_offices.addEventListener('change', (e) => {
 
-select_offices.addEventListener('change', (e) => {
-
-    let state = e.target.value;
-
-    card_office_uni.forEach((item) => {
-        if(item.getAttribute('data-uf') == state){
-            item.style.display = "flex"
-
-        }else{
-            item.style.display = "none";
-        }
+        let state = e.target.value;
+    
+        card_office_uni.forEach((item) => {
+            if(item.getAttribute('data-uf') == state){
+                item.style.display = "flex"
+    
+            }else{
+                item.style.display = "none";
+            }
+        });
+    
+    
     });
+}
 
-
-});
 
 
 function return_erro_cep(){

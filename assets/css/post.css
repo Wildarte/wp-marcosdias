@@ -72,7 +72,8 @@ figure.img_post{
 .content_post h4,
 .content_post h5,
 .content_post h6,
-.content_post ul{
+.content_post ul,
+.content_post ol{
     color: var(--color-blue-2);
 }
 .content_post h1{
@@ -81,6 +82,9 @@ figure.img_post{
 .content_post ul{
     margin: 10px 0 10px 20px;
     list-style: disc;
+}
+.content_post ol{
+    margin: 10px 0 10px 20px;
 }
 .content_post img{
     max-width: 100%;
@@ -147,14 +151,16 @@ figure.img_post figcaption{
 }
 .card_post_related a{
     display: flex;
+    width: 100%;
 }
 .card_post_related a img{
-    width: 50%;
+    width: 45%;
     height: 120px;
     object-fit: cover;
 }
 .card_post_related_info{
     padding: 10px;
+    width: 55%;
 }
 .card_post_related_info h4{
     color: var(--color-blue-2);
@@ -245,6 +251,31 @@ figure.img_post figcaption{
 /* single post */
 
 
+.recents_posts_page{
+    padding: 40px 0;
+}
+.card_recents_post{
+    width: 100%;
+    margin: 15px 0 10px;
+}
+.card_recents_post a{
+    display: flex;
+    align-items: flex-start;
+}
+.card_recents_post a img{
+    width: 45%;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+.recents_posts_page h4{
+    color: var(--color-blue-2);
+    font-weight: 500;
+    line-height: 1.3em;
+}
+.recents_posts_page time{
+    color: #999;
+}
 
 @media(max-width: 890px){
     .post_body_page{

@@ -8,43 +8,40 @@ get_header()
 <section class="form_bottom container_full">
             <div class="form_bottom_content container d-flex">
 
-                <div class="form_board">
-                    <h3 class="subtitle-default">contato</h3>
-                    <h2 class="title-default">Entre em contato conosco!</h2>
-                    <p class="desc-default">Somos mais de 113 profissionais especializados e prontos para tirar todas as suas dúvidas sobre direitos trabalhistas.
-                        Agende a sua visita pelo formulário.</p>
+                <div class="form_board d-flex">
+                    <div class="f-50 left_contact_page">
+                        <h2 class="title-default">Entre em contato conosco!</h2>
+                        <p class="desc-default">Somos mais de 113 profissionais especializados e prontos para tirar todas as suas dúvidas sobre direitos trabalhistas. Agende a sua visita pelo formulário.</p>
+                    </div>
+                   
+                    <div class="f-50">
+                        <form action="" class="form form_page_contact" method="post" id="formHome">
+                            <p style="width: 100%; text-align: center; padding: 0 10px" id="retorno_form_home"></p>
 
-                    <form action="" class="form" method="post">
-                        <div id="return_form_two" style="width: 100%; text-align: center; color: var(--color-green)">
-                            
-                        </div>
-                        <div class="form_group_bottom">
-                            <label for="name">Nome:</label>
-                            <input type="text" name="nome" id="nomeFormTwo">
-                        </div>
-                        <div class="form_group_bottom">
-                            <label for="empresa">Empresa:</label>
-                            <input type="text" name="empresa" id="empresaFormTwo">
-                        </div>
-                        <div class="form_group_bottom">
-                            <label for="email">Email:</label>
-                            <input type="text" name="email" id="emailFormTwo">
-                        </div>
-                        <div class="form_group_bottom">
-                            <label for="area_atuação">Cargo:</label>
-                            <select name="" id="cargoFormTwo">
-                                <option value=""></option>
-                                <option value="opt1">option 1</option>
-                                <option value="opt2">option 2</option>
-                                <option value="opt3">option 3</option>
-                                <option value="opt4">option 4</option>
-                            </select>
-                        </div>
-                        
-                        <div class="d-flex button_form_bottom">
-                            <button class="btn-blue" type="submit" id="sendForm2">Enviar</button>
-                        </div>
-                    </form>
+                            <div class="form_group f-50">
+                                <input type="text" name="nome_home" id="nome_home" placeholder="Nome" required>
+                            </div>
+                            <input type="hidden" name="null1" value="">
+                            <input type="hidden" name="null2" value="">
+                            <input type="hidden" name="contato_from" value="<?= home_url() ?>/contato">
+                            <div class="form_group f-50">
+                                <input type="email" name="email_home" id="email_home" placeholder="E-mail" required>
+                            </div>
+                            <div class="form_group f-50">
+                                <input type="text" name="empresa_home" id="empresa_home" placeholder="Empresa">
+                            </div>
+                            <div class="form_group f-50">
+                                <input type="text" name="cargo_home" id="cargo_home" placeholder="Cargo">
+                            </div>
+                            <div class="form_group w-100">
+                                <textarea name="msg_home" id="msg_home" cols="30" rows="8" placeholder="Deseja dizer algo sobre seu contato" required></textarea>
+                            </div>
+                            <div class="form_group w-100 form_group_button">
+                                <button class="btn-blue" type="submit" id="sendHome">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                    
                 </div>
 
             </div>

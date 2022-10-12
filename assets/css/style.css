@@ -11,6 +11,7 @@
     --color-dark: #4F5955;
     --color-white: #ffffff;
     --color-black: #000000;
+    --color-green: #339933;
 
     --container: 1180px;
     --half-container: var(var(--container) / 2)
@@ -52,6 +53,9 @@
 }
 .color-red{
     color: red;
+}
+.color-green{
+    color: var(--color-green);
 }
 .d-flex{
     display: flex;
@@ -730,7 +734,7 @@ form.form{
     padding: 10px;
 }
 .form_board p{
-    width: 60%;
+    width: 100%;
     margin: auto;
 }
 .content_bottom{
@@ -743,6 +747,26 @@ form.form{
 }
 /* form bottom */
 
+.left_contact_page{
+    text-align: left;
+    padding: 15px;
+}
+.form_page_contact{
+    text-align: left;
+}
+.form_page_contact .form_group_bottom{
+    flex-basis: 100%;
+}
+.form_page_contact .button_form_bottom{
+    justify-content: flex-start;
+}
+.form_page_contact .form_group{
+    flex-basis: 100%;
+}
+.form_page_contact .form_group input, .form_page_contact .form_group textarea{
+    border: 1px solid #bbbbbb;
+    flex-basis: 100%;
+}
 
 
 footer.footer{
@@ -961,7 +985,10 @@ footer.footer{
 }
 /* page office */
 
-
+.error_page{
+    text-align: center;
+    padding: 60px 10px;
+}
 
 
 
@@ -1085,6 +1112,13 @@ footer.footer{
     .header_office_slide{
         margin-bottom: 50px;
         padding: 10px;
+    }
+    .main_slide_office_right_content{
+        margin: 10px auto;
+        padding: 40px 0 10px;
+    }
+    .main_slide_office_right_content p{
+        margin-bottom: 10px;
     }
 }
 @media(max-width: 890px){

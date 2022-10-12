@@ -1,7 +1,7 @@
 <section class="select_office">
 
     <div class="container select_office_list">
-        <h4 class="title-default">Selecione um dos estados onde estamos presentes</h4>
+        <h4 class="title-default">Selecione um dos estados onde estamos presente</h4>
         <select name="" id="select_offices">
             <option value="none" id="firstOptionOffice">Selcione o Estado</option>
             <option value="MG">Minas Gerais</option>

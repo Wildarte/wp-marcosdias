@@ -33,6 +33,7 @@ function cmb2_field_home(){
         'id' => 'banner_img',
         'name' => 'Imagem',
         'type'    => 'file',
+        'desc' => '<strong>OBS:</strong> Para uma melhor visualização, adicione imagem com uma das seguintes dimensões: 1920 x 1100, 1280 x 733 ou 820 x 470',
         // Optional:
         'options' => array(
             'url' => false, // Hide the text input for the url

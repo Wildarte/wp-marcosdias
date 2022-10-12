@@ -205,3 +205,101 @@ if(office_carousel){
     })
 }
 
+
+
+//=================================== form home send ==========================================
+$("form#formHome").submit(function(e) {
+
+    e.preventDefault();
+
+    const btn_send_home = document.getElementById('sendHome');
+
+    btn_send_home.innerHTML = "Enviando...";
+
+    //======= get the fields ==========
+    let nome = document.getElementById('nome_home');
+    let email = document.getElementById('email_home');
+    let empresa = document.getElementById('empresa_home');
+    let cargo = document.getElementById('cargo_home');
+    let msg = document.getElementById('msg_home');
+    //======= get the fields ==========
+
+    //=========== valida fields =====================
+    if(nome.value == "" || email.value == "" || msg.value == ""){
+        if(nome.value == ""){
+            nome.style.border = "1px solid red"
+        }
+        if(email.value == ""){
+            email.style.border = "1px solid red"
+        }
+        if(msg.value == ""){
+            msg.style.border = "1px solid red"
+        }
+
+        setTimeout(function(){
+            nome.style.border = "none";
+            email.style.border = "none";
+            msg.style.border = "none";
+        }, 2000);
+        btn_send_home.innerHTML = "Enviar";
+
+    //=========== valida fields =====================
+    }else{
+
+        var formData = new FormData(this);
+        console.log('caiu no else')
+
+        $.ajax({
+            url: url_site+'/submit_form.php',
+            type: 'POST',
+            data: formData,
+            success: function (data) {
+                console.log('caiu no success')
+    
+                switch(data){
+                    case "5":
+                        document.getElementById("retorno_form_home").innerHTML = "<strong style='color: orange'>Erro incomum </strong>";
+                        document.getElementById('sendHome').innerHTML = "Enviar";
+                    break;
+                    case "4":
+                        document.getElementById("retorno_form_home").innerHTML = "<strong style='color: red'> Preencha todos os campos </strong>";
+                        document.getElementById('sendHome').innerHTML = "Enviar";
+                    break;
+                    case "1":
+                        document.getElementById("retorno_form_home").classList.add('bg-green');
+                        document.getElementById("retorno_form_home").innerHTML = "<strong class='color-green'> Recebemos sua mensagem, em breve entraremos em contato! </strong>";
+                        document.getElementById('sendHome').innerHTML = "Enviar";
+    
+                        nome.value = "";    
+                        email.value = "";
+                        empresa.value = "";
+                        cargo.value = "";
+                        msg.value = "";
+    
+                        setTimeout(function(){
+                            document.getElementById("retorno_form_home").innerHTML = "";
+                            document.getElementById("retorno_form_home").classList.remove('bg-green');
+                        }, 4000)
+                    break;
+                    default:
+                        document.getElementById("retorno_form_home").innerHTML = "<strong style='color: orange'>Erro desconhecido</strong>";
+                        document.getElementById('sendHome').innerHTML = "Enviar";
+                }
+    
+                setTimeout(function(){
+    
+                    //document.getElementById("retorno_form_home").innerHTML = "";
+                    document.getElementById('sendHome').innerHTML = "Enviar";
+    
+                }, 4000);
+            },
+            cache: false,
+            contentType: false,
+            processData: false
+        });
+    }
+    
+
+    
+});
+

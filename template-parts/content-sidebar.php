@@ -1,3 +1,11 @@
+<?php
+
+$number_whatsapp = get_post_meta(get_id_by_template_name('page-home.php'), 'number_whatsapp', true);
+$msg_whatsapp = get_post_meta(get_id_by_template_name('page-home.php'), 'msg_whatsapp', true);
+$link_whatsapp = 'https://api.whatsapp.com/send?phone='.$number_whatsapp.'&text='.$msg_whatsapp;
+
+?>
+
 <div class="sidebar_category">
     <h3 class="subtitle-default">Categorias</h3>
     <ul class="list_category">
@@ -23,6 +31,6 @@
 <div class="cta_sidebar">
     <h4 class="subtitle-default color-white">Busque agora seus direitos</h4>
     <p class="desc-default color-white">Entre em contato com a Marcos Roberto Dias Sociedade de Advogados</p>
-    <a class="btn-blue bg-gray-5" href="">Converse com um advogado</a>
+    <a class="btn-blue bg-gray-5" href="<?= $link_whatsapp ?>">Converse com um advogado</a>
 </div>
             

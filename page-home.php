@@ -1,6 +1,9 @@
 <?php
 //Template Name: Home
 get_header();
+$number_whatsapp = get_post_meta(get_the_ID(), 'number_whatsapp', true);
+$msg_whatsapp = get_post_meta(get_the_ID(), 'msg_whatsapp', true);
+$link_whatsapp = 'https://api.whatsapp.com/send?phone='.$number_whatsapp.'&text='.$msg_whatsapp;
 ?>
 
     <main>
@@ -62,7 +65,7 @@ get_header();
 
                     <div class="section_two_contact d-flex">
                         <div class="contact_uni f-50 d-flex">
-                            <a href="" class="icon_contact">
+                            <a href="https://api.whatsapp.com/send?phone=5531982688311" class="icon_contact">
                                 <i class="bi bi-whatsapp"></i>
                             </a>
                             <div class="contact_uni_info">
@@ -72,7 +75,7 @@ get_header();
                         </div>
 
                         <div class="contact_uni d-flex f-50">
-                            <a href="" class="icon_contact">
+                            <a href="tel:31982688311" class="icon_contact">
                                 <i class="bi bi-telephone"></i>
                             </a>
                             <div class="contact_uni_info">
@@ -382,7 +385,7 @@ get_header();
                 </div>
 
                 <div class="cta_ask">
-                    <a class="btn-blue" href="">Deixe sua dúvida</a>
+                    <a class="btn-blue" href="#formHome">Deixe sua dúvida</a>
                 </div>
 
             </div>
@@ -399,31 +402,36 @@ get_header();
                     <h2 class="title-default title_form">Ligamos para você</h2>
                     <p class="desc-default desc_form">Se você tiver qualquer problema ou dúvidas sobre os seus direitos, preencha o formulário que entraremos em contato assim que recebermos a sua solicitação.</p>
 
-                    <form action="" class="form_call d-flex">
+                    <form action="" class="form_call d-flex" id="formHome">
+                        <p style="width: 100%; text-align: center; padding: 0 10px" id="retorno_form_home"></p>
+
                         <div class="form_group f-50">
-                            <input type="text" name="" id="" placeholder="Nome">
+                            <input type="text" name="nome_home" id="nome_home" placeholder="Nome" required>
+                        </div>
+                        <input type="hidden" name="null1" value="">
+                        <input type="hidden" name="null2" value="">
+                        <input type="hidden" name="contato_from" value="<?= home_url() ?>">
+                        <div class="form_group f-50">
+                            <input type="email" name="email_home" id="email_home" placeholder="E-mail" required>
                         </div>
                         <div class="form_group f-50">
-                            <input type="text" name="" id="" placeholder="E-mail">
+                            <input type="text" name="empresa_home" id="empresa_home" placeholder="Empresa">
                         </div>
                         <div class="form_group f-50">
-                            <input type="text" name="" id="" placeholder="Empresa">
-                        </div>
-                        <div class="form_group f-50">
-                            <input type="text" name="" id="" placeholder="Cargo">
+                            <input type="text" name="cargo_home" id="cargo_home" placeholder="Cargo">
                         </div>
                         <div class="form_group w-100">
-                            <textarea name="" id="" cols="30" rows="8" placeholder="Deseja dizer algo sobre seu contato    "></textarea>
+                            <textarea name="msg_home" id="msg_home" cols="30" rows="8" placeholder="Deseja dizer algo sobre seu contato" required></textarea>
                         </div>
                         <div class="form_group w-100 form_group_button">
-                            <button class="btn-blue" type="submit">Enviar</button>
+                            <button class="btn-blue" type="submit" id="sendHome">Enviar</button>
                         </div>
                     </form>
 
                 </div>
 
                 <div class="section_form_img">
-                    <img src="<?= get_template_directory_uri() ?>/assets/img/telefonista.png" alt="">
+                    <img src="<?= get_template_directory_uri() ?>/assets/img/telefonista.png" alt="">   
                 </div>
 
             </div>
@@ -438,48 +446,36 @@ get_header();
                 </header>
 
                 <div class="post_slide d-flex">
+                    <?php
+                        $args = [
+                            'post_type' => 'post',
+                            'posts_per_page' => 3
+                        ];
+                        $result = new WP_Query($args);
+
+                        if($result->have_posts()):
+                            while($result->have_posts()):
+                                $result->the_post();
+                    ?>
                     <article class="card_post">
-                        <a href="">
-                            <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_960_720.jpg" alt="">
+                        <a href="<?= get_the_permalink() ?>">
+                            <img src="<?= get_the_post_thumbnail_url(null, 'medium') ?>" alt="">
                             <div class="card_post_info">
-                                <h4 class="subtitle-default">Metas abusivas: Cobrança ou Humilhação</h4>
-                                <span>Marcos Roberto Dias</span>
+                                <h4 class="subtitle-default"><?= get_the_title() ?></h4>
+                                <span><?= get_the_author() ?></span>
                                 <p class="desc-default">
-                                    A cobrança de metas é comum em qualquer empresa, pois além de impactar diretamente os resultados, ainda mantém os trabalhadores motivados.
+                                    <?= get_the_excerpt() ?>
                                 </p>
                             </div>
                         </a>
                     </article>
 
-                    <article class="card_post">
-                        <a href="">
-                            <img src="https://cdn.pixabay.com/photo/2015/01/09/11/11/office-594132_960_720.jpg" alt="">
-                            <div class="card_post_info">
-                                <h4 class="subtitle-default">Metas abusivas: Cobrança ou Humilhação</h4>
-                                <span>Marcos Roberto Dias</span>
-                                <p class="desc-default">
-                                    A cobrança de metas é comum em qualquer empresa, pois além de impactar diretamente os resultados, ainda mantém os trabalhadores motivados.
-                                </p>
-                            </div>
-                        </a>
-                    </article>
+                    <?php endwhile; endif; wp_reset_query() ?>
 
-                    <article class="card_post">
-                        <a href="">
-                            <img src="https://cdn.pixabay.com/photo/2016/04/20/08/21/entrepreneur-1340649_960_720.jpg" alt="">
-                            <div class="card_post_info">
-                                <h4 class="subtitle-default">Metas abusivas: Cobrança ou Humilhação</h4>
-                                <span>Marcos Roberto Dias</span>
-                                <p class="desc-default">
-                                    A cobrança de metas é comum em qualquer empresa, pois além de impactar diretamente os resultados, ainda mantém os trabalhadores motivados.
-                                </p>
-                            </div>
-                        </a>
-                    </article>
                 </div>
 
                 <div class="see_more">
-                    <a class="subtitle-default text-uppercase" href="<?= home_url() ?>">+ Veja Todos os Posts</a>
+                    <a class="subtitle-default text-uppercase" href="<?= home_url() ?>/blog">+ Veja Todos os Posts</a>
                 </div>
             </div>
 

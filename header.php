@@ -14,8 +14,8 @@
 <body>
 
     <?php
-        $number_whatsapp = get_post_meta(get_the_ID(), 'number_whatsapp', true);
-        $msg_whatsapp = get_post_meta(get_the_ID(), 'msg_whatsapp', true);
+        $number_whatsapp = get_post_meta(get_id_by_template_name('page-home.php'), 'number_whatsapp', true);
+        $msg_whatsapp = get_post_meta(get_id_by_template_name('page-home.php'), 'msg_whatsapp', true);
         $link_whatsapp = 'https://api.whatsapp.com/send?phone='.$number_whatsapp.'&text='.$msg_whatsapp;
     ?>
 

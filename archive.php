@@ -1,5 +1,6 @@
 <?php 
 get_header();
+
 ?>
 
 <main>
@@ -36,41 +37,36 @@ get_header();
                 </a>
             </article>
             <?php
-                endwhile; endif;
+                endwhile; else: 
+                    
+                $args = [
+                    'post_type' => 'post',
+                ];
+
+                $results =  new WP_Query($args);
+
+                if($results->have_posts()):
+                    echo '<h2 class="subtitle-default p-10">!!Nenhum post nessa Categoria ou Tag, talvez você goste dos seguintes conteúdos!!</h2>';
+                    while($results->have_posts()):
+                        $results->the_post();
             ?>
+            
             <article class="card_blog">
-                <a href="">
+                <a href="<?= get_permalink() ?>">
                     <header class="card_blog_header"> 
-                        <h3 class="subtitle-default">Metas abusivas: cobrança ou humilhação?</h3>
+                        <h3 class="subtitle-default"><?= get_the_title() ?></h3>
                     </header>
-                    <img src="https://cdn.pixabay.com/photo/2015/02/02/15/28/bar-621033_960_720.jpg" alt="">
+                    <img src="<?= get_the_post_thumbnail_url(null, 'medium') ?>" alt="">
                     <div class="card_blog_excerpt desc-default">
-                        <p>Cobrar metas inalcançáveis de maneira abusiva. Quando a cobrança passa a ferir os direitos do trabalhador?... <strong>Ler mais</strong></p>
+                        <p><?= get_the_excerpt() ?>..<strong>Ler mais</strong></p>
                     </div>
                 </a>
             </article>
-            <article class="card_blog">
-                <a href="">
-                    <header class="card_blog_header"> 
-                        <h3 class="subtitle-default">Metas abusivas: cobrança ou humilhação?</h3>
-                    </header>
-                    <img src="https://cdn.pixabay.com/photo/2015/02/02/15/28/bar-621033_960_720.jpg" alt="">
-                    <div class="card_blog_excerpt desc-default">
-                        <p>Cobrar metas inalcançáveis de maneira abusiva. Quando a cobrança passa a ferir os direitos do trabalhador?... <strong>Ler mais</strong></p>
-                    </div>
-                </a>
-            </article>
-            <article class="card_blog">
-                <a href="">
-                    <header class="card_blog_header"> 
-                        <h3 class="subtitle-default">Metas abusivas: cobrança ou humilhação?</h3>
-                    </header>
-                    <img src="https://cdn.pixabay.com/photo/2015/02/02/15/28/bar-621033_960_720.jpg" alt="">
-                    <div class="card_blog_excerpt desc-default">
-                        <p>Cobrar metas inalcançáveis de maneira abusiva. Quando a cobrança passa a ferir os direitos do trabalhador?... <strong>Ler mais</strong></p>
-                    </div>
-                </a>
-            </article>
+                
+            <?php 
+                endwhile; endif; wp_reset_query(); endif;
+            ?>
+            
         </section>
 
     </section>

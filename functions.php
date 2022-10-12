@@ -178,7 +178,8 @@
         }
     }
 
-    include('admin/postfield.php')
+    include('admin/postfield.php');
+    include('admin/fieldsSMTP.php');
 
 
 

@@ -39,39 +39,7 @@ get_header();
             <?php
                 endwhile; endif;
             ?>
-            <article class="card_blog">
-                <a href="">
-                    <header class="card_blog_header"> 
-                        <h3 class="subtitle-default">Metas abusivas: cobrança ou humilhação?</h3>
-                    </header>
-                    <img src="https://cdn.pixabay.com/photo/2015/02/02/15/28/bar-621033_960_720.jpg" alt="">
-                    <div class="card_blog_excerpt desc-default">
-                        <p>Cobrar metas inalcançáveis de maneira abusiva. Quando a cobrança passa a ferir os direitos do trabalhador?... <strong>Ler mais</strong></p>
-                    </div>
-                </a>
-            </article>
-            <article class="card_blog">
-                <a href="">
-                    <header class="card_blog_header"> 
-                        <h3 class="subtitle-default">Metas abusivas: cobrança ou humilhação?</h3>
-                    </header>
-                    <img src="https://cdn.pixabay.com/photo/2015/02/02/15/28/bar-621033_960_720.jpg" alt="">
-                    <div class="card_blog_excerpt desc-default">
-                        <p>Cobrar metas inalcançáveis de maneira abusiva. Quando a cobrança passa a ferir os direitos do trabalhador?... <strong>Ler mais</strong></p>
-                    </div>
-                </a>
-            </article>
-            <article class="card_blog">
-                <a href="">
-                    <header class="card_blog_header"> 
-                        <h3 class="subtitle-default">Metas abusivas: cobrança ou humilhação?</h3>
-                    </header>
-                    <img src="https://cdn.pixabay.com/photo/2015/02/02/15/28/bar-621033_960_720.jpg" alt="">
-                    <div class="card_blog_excerpt desc-default">
-                        <p>Cobrar metas inalcançáveis de maneira abusiva. Quando a cobrança passa a ferir os direitos do trabalhador?... <strong>Ler mais</strong></p>
-                    </div>
-                </a>
-            </article>
+            
         </section>
 
     </section>
