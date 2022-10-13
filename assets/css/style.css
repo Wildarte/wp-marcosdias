@@ -17,7 +17,9 @@
     --half-container: var(var(--container) / 2)
 }
 
-
+html{
+    scroll-behavior: smooth; /* scroll suave */
+}
 /* general style */
 .container{
     max-width: var(--container);
@@ -988,6 +990,22 @@ footer.footer{
 .error_page{
     text-align: center;
     padding: 60px 10px;
+}
+.pagination{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px 10px;
+}
+.pagination a{
+    background-color: var(--color-blue-2);
+    padding: 4px 12px;
+    color: var(--color-white);
+}
+.pagination span.current{
+    background-color: var(--color-blue-h);
+    padding: 4px 12px;
+    color: var(--color-white);
 }
 
 

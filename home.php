@@ -39,8 +39,14 @@ get_header();
             <?php
                 endwhile; endif;
             ?>
+
+            <div class="pagination">
+                <?php  the_posts_pagination( 'mid_size=3' ); ?>
+            </div>
             
         </section>
+
+        
 
     </section>
 

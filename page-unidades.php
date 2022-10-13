@@ -62,7 +62,6 @@ get_header();
                     </div>
                     <div class="form_group f-50 d-column">
                         <input type="text" name="" id="office_cep" placeholder="CEP">
-                        
                     </div>
                     <div class="form_group f-50">
                         <input type="text" name="" id="office_estado" placeholder="Estado">

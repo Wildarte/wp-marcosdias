@@ -140,7 +140,7 @@ function cmb2_field_home(){
     $cmb2_whatsapp->add_field([
         'id' => 'number_whatsapp',
         'name' => 'Número do Whatsapp',
-        'desc' => 'Adicione aqui o número do Whatsapp<br><strong>Esse número será adiconado nos botões de contato da página Home</strong>',
+        'desc' => 'Adicione aqui o número do Whatsapp <strong>sem pontos ou traços e com o código do país</strong> (brasil - 55)<br><strong>Esse número será adiconado nos botões de contato da página Home</strong>',
         'type' => 'text'
     ]);
     $cmb2_whatsapp->add_field([

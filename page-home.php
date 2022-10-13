@@ -385,7 +385,7 @@ $link_whatsapp = 'https://api.whatsapp.com/send?phone='.$number_whatsapp.'&text=
                 </div>
 
                 <div class="cta_ask">
-                    <a class="btn-blue" href="#formHome">Deixe sua dúvida</a>
+                    <a class="btn-blue" href="#formCon">Deixe sua dúvida</a>
                 </div>
 
             </div>
@@ -394,7 +394,7 @@ $link_whatsapp = 'https://api.whatsapp.com/send?phone='.$number_whatsapp.'&text=
 
         
 
-        <section class="section_form">
+        <section class="section_form" id="formCon">
 
             <div class="container d-flex section_form_content">
                 <div class="section_form_left">
